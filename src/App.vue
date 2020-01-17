@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <div class="nav">
+          <router-link to='/home' tag='span' active-class='on'>首页</router-link>
+          <router-link to='/movie' tag='span' active-class='on'>电影</router-link>
+          <router-link to='/todo' tag='span' active-class='on'>任务</router-link>
+          <router-link to='/user' tag='span' active-class='on'>我的</router-link>
+          <router-link to='/films' tag='span' active-class='on'>卖座电影</router-link>
+          <router-link to='/element' tag='span' active-class='on'>UI</router-link>
+          <router-link to='/song' tag='span' active-class='on'>邓紫棋</router-link>
+      </div>
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+
   }
 }
+
+
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin: 0;
+  padding: 0
+}
+.nav span{
+  padding: 0 20px;
+  font-size: 20px;
+  line-height: 42px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  cursor: pointer;
+}
+.nav span.on{
+  background: pink;
+  color: aqua;
 }
 </style>
